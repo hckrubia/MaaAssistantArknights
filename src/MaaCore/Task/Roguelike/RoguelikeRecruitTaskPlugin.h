@@ -30,7 +30,7 @@ namespace asst
 
     private:
         bool check_core_char();
-        BattleRole get_oper_role(const std::string& name);
+        battle::Role get_oper_role(const std::string& name);
         bool is_oper_melee(const std::string& name);
         // 招募指定干员
         //
@@ -39,6 +39,6 @@ namespace asst
         //   is_rtl: 滑动方向 (true: 从右向左; false: 从左向右，需要先滑动到最左侧)
         // 返回值: 招募结果 (true: 成功; false: 失败)
         bool check_char(const std::string& char_name, bool is_rtl = false);
-        void select_oper(const BattleRecruitOperInfo& oper);
+        void select_oper(const battle::roguelike::Recruitment& oper);
     };
 }
